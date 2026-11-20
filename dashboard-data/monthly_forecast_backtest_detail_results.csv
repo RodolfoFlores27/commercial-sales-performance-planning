@@ -1,0 +1,73 @@
+sales_month,product_name,sales_channel_name,actual_net_sales_php,baseline_forecast_php,actual_minus_forecast_php,absolute_percentage_error_pct
+2025-01-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,47108.9,41563.88,5545.02,11.77
+2025-01-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,62324.14,60176.8,2147.34,3.45
+2025-01-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,65053,64424.25,628.75,0.97
+2025-01-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,84171.87,84602.1,-430.23,0.51
+2025-01-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,278062.56,309778,-31715.44,11.41
+2025-01-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,428214.87,426996,1218.87,0.28
+2025-02-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,47066.27,40048.2,7018.07,14.91
+2025-02-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,49356.19,56775.8,-7419.61,15.03
+2025-02-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,61547.31,61343.7,203.61,0.33
+2025-02-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,73499.17,77728.34,-4229.17,5.75
+2025-02-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,268823.04,267293,1530.04,0.57
+2025-02-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,381954.51,380030.5,1924.01,0.5
+2025-03-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,41410.23,43151.85,-1741.62,4.21
+2025-03-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,57592.51,58047.85,-455.34,0.79
+2025-03-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,62847.99,67603.8,-4755.81,7.57
+2025-03-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,75736.69,82471.95,-6735.26,8.89
+2025-03-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,300976.5,287709,13267.5,4.41
+2025-03-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,361198.19,381060,-19861.81,5.5
+2025-04-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,37575.95,47934.15,-10358.2,27.57
+2025-04-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,63987.92,58680.55,5307.37,8.29
+2025-04-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,61123.19,63873.15,-2749.96,4.5
+2025-04-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,85154.75,84334.8,819.95,0.96
+2025-04-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,329284.56,330600,-1315.44,0.4
+2025-04-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,401415.39,373650.5,27764.89,6.92
+2025-05-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,45977.11,43855.8,2121.31,4.61
+2025-05-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,54997.15,65188.05,-10190.9,18.53
+2025-05-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,67424.35,60462.6,6961.75,10.33
+2025-05-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,95335.21,82608.9,12726.31,13.35
+2025-05-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,255162.57,295379.5,-40216.93,15.76
+2025-05-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,410570.4,451820,-41249.6,10.05
+2025-06-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,41963.03,43842.5,-1879.47,4.48
+2025-06-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,51613.25,62355.15,-10741.9,20.81
+2025-06-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,62321.49,67105.5,-4784.01,7.68
+2025-06-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,86231.87,79874.83,6357.04,7.37
+2025-06-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,296450.76,313229,-16778.24,5.66
+2025-06-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,437724.84,429127.5,8597.34,1.96
+2025-07-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,42536.2,44865.65,-2329.45,5.48
+2025-07-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,59786.34,61667.35,-1881.01,3.15
+2025-07-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,63972.51,56196.78,7775.73,12.15
+2025-07-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,80213.46,80958.9,-745.44,0.93
+2025-07-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,297219.84,314287.5,-17067.66,5.74
+2025-07-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,373743.3,378566,-4822.7,1.29
+2025-08-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,46510.06,44125.6,2384.46,5.13
+2025-08-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,59197.18,58899.05,298.13,0.5
+2025-08-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,68164.82,63000.3,5164.52,7.58
+2025-08-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,87347.69,72992.7,14354.99,16.43
+2025-08-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,278259.06,295017,-16757.94,6.02
+2025-08-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,351085.02,363167,-12081.98,3.44
+2025-09-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,40921.84,42296.85,-1375.01,3.36
+2025-09-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,54669.01,59171.7,-4502.69,8.24
+2025-09-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,58832.63,59781.15,-948.52,1.61
+2025-09-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,77492.05,66939.83,10552.22,13.62
+2025-09-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,322880.49,239337,83543.49,25.87
+2025-09-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,416796.99,389484.5,27312.49,6.55
+2025-10-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,43956.76,47562.7,-3605.94,8.2
+2025-10-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,58625.47,55804.38,2821.09,4.81
+2025-10-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,63319.51,67400.85,-4081.34,6.45
+2025-10-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,84649.85,81160.2,3489.65,4.12
+2025-10-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,261982.46,297453,-35470.54,13.54
+2025-10-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,403086.66,398808,4278.66,1.06
+2025-11-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,45870.52,47955.05,-2084.53,4.54
+2025-11-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,64848.39,60319.83,4528.56,6.98
+2025-11-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,67776.11,70415.4,-2639.29,3.89
+2025-11-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,99812,94264.5,5547.5,5.56
+2025-11-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,279915.54,305863,-25947.46,9.27
+2025-11-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,432799.77,405855,26944.77,6.23
+2025-12-01,Clearbrook Dishwashing Liquid 1 L,Sari-sari & Neighborhood Retail,50982.7,54974.6,-3991.9,7.83
+2025-12-01,Clearbrook Dishwashing Liquid 1 L,Supermarket & Grocery Chains,58451.08,67686.55,-9235.47,15.8
+2025-12-01,Daycrest Shampoo 400 mL,Sari-sari & Neighborhood Retail,74997.85,62119.4,12878.45,17.17
+2025-12-01,Daycrest Shampoo 400 mL,Supermarket & Grocery Chains,98467.28,95079.6,3387.68,3.44
+2025-12-01,Sunvale Long-Grain Rice 25 kg,Sari-sari & Neighborhood Retail,339992.52,341315.5,-1322.98,0.39
+2025-12-01,Sunvale Long-Grain Rice 25 kg,Supermarket & Grocery Chains,465160.29,452414.5,12745.79,2.74

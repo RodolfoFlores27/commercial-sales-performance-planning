@@ -1,0 +1,7 @@
+product_name,product_category,sales_channel_name,channel_group,total_units_sold,actual_net_sales_php,target_net_sales_php,variance_to_target_php,target_attainment_pct,gross_margin_php,gross_margin_pct
+Clearbrook Dishwashing Liquid 1 L,Household Cleaning,Sari-sari & Neighborhood Retail,Traditional Trade,11519,1074056.4,1141620,-67563.6,94.08,259739.4,24.18
+Clearbrook Dishwashing Liquid 1 L,Household Cleaning,Supermarket & Grocery Chains,Modern Trade,15418,1420221.69,1537700,-117478.31,92.36,330282.49,23.26
+Daycrest Shampoo 400 mL,Personal Care,Sari-sari & Neighborhood Retail,Traditional Trade,9432,1541107.64,1613530,-72422.36,95.51,397982.84,25.82
+Daycrest Shampoo 400 mL,Personal Care,Supermarket & Grocery Chains,Modern Trade,12348,2011128.54,2146010,-134881.46,93.71,514435.74,25.58
+Sunvale Long-Grain Rice 25 kg,Staples,Supermarket & Grocery Chains,Modern Trade,6733,9694729.73,10206850,-512120.27,94.98,1704353.73,17.58
+Sunvale Long-Grain Rice 25 kg,Staples,Sari-sari & Neighborhood Retail,Traditional Trade,4977,7106271.4,7628140,-521868.6,93.16,1200227.9,16.89
