@@ -48,6 +48,7 @@ The project uses synthetic, Philippines-based records for a fictional food and h
 
 - [BigQuery SQL queries](sql/) include the data checks, analysis, competitor-price review, and forecast backtest used in this project. They reference the project tables in BigQuery.
 - [Dashboard data exports](dashboard-data/) contain the four synthetic, dashboard-ready CSVs used in Tableau. These are analysis outputs, not the original Salesforce exports.
+- [Python synthetic data seeder](python/generate_seed_data.py) uses NumPy and pandas to prepare synthetic records for Salesforce. The analytical inputs were exported from Salesforce and then loaded into BigQuery.
 
 ## Methodology
 
