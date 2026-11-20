@@ -44,6 +44,11 @@ The project uses synthetic, Philippines-based records for a fictional food and h
 - **Tableau Public:** Presented the analysis in a publicly accessible interactive dashboard.
 - **AI assistance:** Helped draft and troubleshoot code, SQL, and documentation. I reviewed the outputs and checked them against the project’s validation results.
 
+## Supporting Files
+
+- [BigQuery SQL queries](sql/) include the data checks, analysis, competitor-price review, and forecast backtest used in this project. They reference the project tables in BigQuery.
+- [Dashboard data exports](dashboard-data/) contain the four synthetic, dashboard-ready CSVs used in Tableau. These are analysis outputs, not the original Salesforce exports.
+
 ## Methodology
 
 1. **Generate the synthetic source records.** I used Python, NumPy, and pandas to create seed records with stable source keys for the fictional customers, products, sales channels, promotions, and sales data.
