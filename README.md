@@ -50,6 +50,17 @@ The project uses synthetic, Philippines-based records for a fictional food and h
 - [Dashboard data exports](dashboard-data/) contain the four synthetic, dashboard-ready CSVs used in Tableau. These are analysis outputs, not the original Salesforce exports.
 - [Python synthetic data seeder](python/generate_seed_data.py) uses NumPy and pandas to prepare synthetic records for Salesforce. The analytical inputs were exported from Salesforce and then loaded into BigQuery.
 
+### Salesforce exports and cleaned data
+
+- [Salesforce export inputs](data/salesforce-exports/) contains the seven synthetic CSV exports used as Power Query sources.
+- [Power Query cleaned tables](data/power-query-cleaned/) contains the seven cleaned CSVs exported by the workbook and loaded into BigQuery.
+
+### Excel Power Query and VBA workbook
+
+[Download the workbook](Project2_Power_Query_Workbook_Public.xlsm). It contains the Power Query steps, QA summary, and refresh/export macro.
+
+To refresh it, download and extract the repository, then set the `pRepoRootFolder` parameter to the extracted repository root—the folder containing `README.md` and `data`. Refresh the queries and run `RefreshQAAndExportCleanCSVs` to export the cleaned tables to `data/power-query-cleaned`. The workbook uses synthetic data.
+
 ## Methodology
 
 1. **Generate the synthetic source records.** I used Python, NumPy, and pandas to create seed records with stable source keys for the fictional customers, products, sales channels, promotions, and sales data.
