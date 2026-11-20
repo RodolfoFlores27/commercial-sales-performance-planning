@@ -1,0 +1,4 @@
+﻿"Id","Name","ProductCode","Product_Source_Key__c","Product_Category__c","Brand__c","Unit_of_Measure__c","IsActive"
+"01tak00000YcugjAAB","Sunvale Long-Grain Rice 25 kg","SKU-001","PROD_001","Staples","Sunvale","Sack","true"
+"01tak00000YcugkAAB","Clearbrook Dishwashing Liquid 1 L","SKU-002","PROD_002","Household Cleaning","Clearbrook","Bottle","true"
+"01tak00000YcuglAAB","Daycrest Shampoo 400 mL","SKU-003","PROD_003","Personal Care","Daycrest","Bottle","true"

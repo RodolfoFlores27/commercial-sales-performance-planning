@@ -1,0 +1,7 @@
+﻿Id,Name,Customer_Source_Key__c,Customer_Segment__c,Region__c
+001ak00004FDjcXAAT,Luzon Neighborhood Grocer,CUST_001,Independent Retail,Luzon
+001ak00004FDjcYAAT,Mindanao Community Retailer,CUST_002,Independent Retail,Mindanao
+001ak00004FDjcZAAT,Luzon Foodservice Supplier,CUST_003,Foodservice,Luzon
+001ak00004FDjcaAAD,Mindanao Regional Markets,CUST_004,Regional Chain,Mindanao
+001ak00004FDjcbAAD,Visayas Foodservice Group,CUST_005,Foodservice,Visayas
+001ak00004FDjccAAD,Visayas Grocery Network,CUST_006,Regional Chain,Visayas
