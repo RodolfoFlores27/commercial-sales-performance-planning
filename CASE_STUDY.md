@@ -30,6 +30,9 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Used Salesforce Data Loader to export seven record groups to CSV: accounts, products, sales channels, promotions, monthly sales actuals, monthly sales targets, and competitor price observations. I saved the files in data/salesforce-exports/.
 - **Key check:** Confirmed the export row counts matched the Salesforce records and that the files retained the IDs used to connect related records.
 - **Output:** Seven raw Salesforce export files for Power Query. The Python seed files supported the Salesforce setup; they were not the files loaded into BigQuery.
+![Data Loader export showing 864 monthly sales records successfully extracted with no errors](images/workflow/01-salesforce-export.png)
+
+*The export included Salesforce record IDs and the source key used to identify each monthly sales record.*
 
 ## 4. Profile and Clean the Salesforce Exports
 
@@ -37,6 +40,9 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Loaded the seven Salesforce CSV exports into Excel Power Query. I checked row counts, data types, missing values, key uniqueness, date ranges, and relationships. The checks revealed six different competitor-name spellings for two competitors and three missing competitor prices. I standardized the names and kept the prices blank because there was no evidence to replace them with reliable values. I also confirmed that blank promotion links on monthly sales records meant “no promotion,” rather than missing sales data.
 - **Key check:** Confirmed that the cleaned tables retained their expected row counts and that the promotion-link status showed 720 records with no promotion and 144 linked to a promotion.
 - **Output:** Seven cleaned tables, with the missing competitor prices preserved for review rather than filled with guesses.
+![Power Query profile showing competitor-name variations and missing price values](images/workflow/02-power-query-profile.png)
+
+*Profiling covered 288 records and revealed six name variations and three missing prices.*
 
 ## 5. Check and Export the Clean Tables with VBA
 
@@ -44,6 +50,9 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Updated an Excel VBA macro to refresh the Power Query results, compare actual row counts and unique keys with the expected values, run project-specific checks, and export the tables as CSV files to `data/power-query-cleaned/`.
 - **Key check:** The QA summary reported PASS for all seven tables. It also confirmed that all 864 monthly sales records passed the financial check, 720 had no promotion and 144 were promotion-linked, and the competitor data contained three missing prices and two standardized competitor names.
 - **Output:** Seven cleaned CSV files, ready for BigQuery.
+![Excel QA Summary showing all seven cleaned tables passing their checks](images/workflow/03-excel-qa-summary.png)
+
+*The summary shows the expected row counts and key checks, plus project-specific checks for sales, promotions, and competitor prices.*
 
 ## 6. Load and Validate the Clean Tables in BigQuery
 
