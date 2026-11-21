@@ -37,7 +37,8 @@ The analyses are intended to identify areas for review and demonstrate the use o
 The project uses synthetic, Philippines-based records for a fictional food and household-products distributor. The seven datasets cover customers, products, sales channels, promotions, monthly sales actuals, monthly sales targets, and competitor price observations.
 
 - **Python, NumPy, and pandas:** Generated repeatable synthetic seed data and prepared records for Salesforce.
-- **Salesforce Developer Edition:** Held the customer, product, channel, promotion, actuals, target, and competitor-observation records. I exported these Salesforce records as the source files for the analysis.
+- **Salesforce Developer Edition:** Stored the customer, product, sales-channel, promotion, sales, target, and competitor-observation records.
+- **Salesforce Data Import Wizard and Data Loader:** The Import Wizard handled the initial account and sales-channel imports. Data Loader handled later bulk imports and the promotion update, then exported the seven Salesforce datasets to CSV for the analysis.
 - **Excel Power Query:** Profiled, inspected, and cleaned the exported data.
 - **Excel VBA:** Refreshed the queries, checked row counts and keys, ran project-specific quality checks, and exported the approved tables.
 - **BigQuery Sandbox and SQL:** Loaded the cleaned tables, validated relationships and data grain, and calculated the performance, promotion, price-comparison, and forecast metrics.
@@ -65,9 +66,9 @@ To refresh it, download and extract the repository, then set the `pRepoRootFolde
 
 1. **Generate the synthetic source records.** I used Python, NumPy, and pandas to create seed records with stable source keys for the fictional customers, products, sales channels, promotions, and sales data.
 
-2. **Set up and populate Salesforce.** I loaded the related records into Salesforce Developer Edition. Salesforce record IDs were used to connect customers, products, channels, and promotions across the imported records.
+2. **Set up and populate Salesforce.** I loaded the initial account and sales-channel records with Salesforce’s Data Import Wizard, then used Data Loader for later bulk imports and the promotion update. Salesforce record IDs connected related customers, products, channels, and promotions.
 
-3. **Export the Salesforce data.** I exported the records from Salesforce to create the raw files for the analysis. These exports—not the original Python seed files—were the inputs to the Power Query cleaning and BigQuery analysis.
+3. **Export the Salesforce data.** I used Data Loader to export accounts, products, sales channels, promotions, monthly sales actuals, monthly sales targets, and competitor price observations to CSV. These Salesforce exports—not the original Python seed files—were the inputs to Power Query and, after cleaning, BigQuery.
 
 4. **Profile and clean the exports.** In Excel Power Query, I checked row counts, data types, missing values, key uniqueness, and relationships. The checks surfaced issues such as inconsistent competitor names and three missing competitor prices. I standardized the names and retained the missing prices as missing rather than filling them with guesses. A separate competitor reading was later flagged as an unverified outlier and excluded from the price comparison; its source record was retained.
 
