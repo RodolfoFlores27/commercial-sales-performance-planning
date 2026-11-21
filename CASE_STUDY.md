@@ -51,6 +51,9 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Created the project dataset in BigQuery Sandbox and loaded the seven cleaned CSV files as tables. I checked the table fields and row counts, then used SQL to check unique keys, missing links, and whether monthly sales and target records matched on customer, product, sales channel, and month.
 - **Key check:** All seven tables had the expected row counts and unique keys. The relationship checks found no unmatched records, and all 864 sales records matched a target at the same customer, product, channel, and month.
 - **Output:** Validated BigQuery tables ready for analysis.
+![BigQuery row-count and key-validation results for all seven tables](images/workflow/04-bigquery-validation.png)
+
+*All seven tables had the expected row counts and distinct keys, with no blank source keys.*
 
 ## 7. Analyze Commercial Performance with SQL
 
