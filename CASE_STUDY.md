@@ -44,3 +44,10 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Updated an Excel VBA macro to refresh the Power Query results, compare actual row counts and unique keys with the expected values, run project-specific checks, and export the tables as CSV files to `data/power-query-cleaned/`.
 - **Key check:** The QA summary reported PASS for all seven tables. It also confirmed that all 864 monthly sales records passed the financial check, 720 had no promotion and 144 were promotion-linked, and the competitor data contained three missing prices and two standardized competitor names.
 - **Output:** Seven cleaned CSV files, ready for BigQuery.
+
+## 6. Load and Validate the Clean Tables in BigQuery
+
+- **Goal:** Confirm that the cleaned Salesforce exports loaded correctly and that the related records still matched.
+- **What I did:** Created the project dataset in BigQuery Sandbox and loaded the seven cleaned CSV files as tables. I checked the table fields and row counts, then used SQL to check unique keys, missing links, and whether monthly sales and target records matched on customer, product, sales channel, and month.
+- **Key check:** All seven tables had the expected row counts and unique keys. The relationship checks found no unmatched records, and all 864 sales records matched a target at the same customer, product, channel, and month.
+- **Output:** Validated BigQuery tables ready for analysis.
