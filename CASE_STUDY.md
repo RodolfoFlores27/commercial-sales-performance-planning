@@ -58,3 +58,18 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Used BigQuery SQL to compare sales with targets, calculate gross-margin and year-over-year changes, review promotion discount gaps and related sales patterns, compare our prices with available competitor readings, and backtest a simple 2025 forecast using the matching months from 2024.
 - **Key decision or check:** Kept three missing competitor prices blank and excluded one unverified price reading from the comparison while retaining its source record. Treated the promotion and competitor comparisons as descriptive patterns, not proof that one factor caused another.
 - **Output:** Four summary CSVs for the dashboard: target attainment, forecast backtest, competitor price comparison, and planned-versus-realized promotion discounts.
+
+## 8. Present Selected Results in Tableau Public
+
+- **Goal:** Give recruiters and business readers a clear way to explore the main results.
+- **What I did:** Built a Tableau Public dashboard with four views: target attainment by product and channel, the 2025 forecast backtest, net price compared with the competitor average, and planned versus realized promotion discounts. I added filters so readers can focus on a product, channel, or promotion.
+- **Key check:** Compared chart values with the four BigQuery summary files and confirmed the published dashboard opens publicly.
+- **Output:** [View the Commercial Sales Performance & Planning dashboard](https://public.tableau.com/app/profile/rodolfo.flores4240/viz/CommercialSalesPerformancePlanning/CommercialSalesPerformancePlanning?publish=yes)
+
+![Dashboard overview showing target attainment, forecast backtest, and competitor price comparison](images/dashboard_overview.png)
+
+*The overview presents selected performance measures from the analysis.*
+
+![Planned-versus-realized promotion discount detail](images/promotion_discount_detail.png)
+
+*The promotion view compares the recorded discount measures; the relationship is descriptive.*
