@@ -30,9 +30,12 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Used Salesforce Data Loader to export seven record groups to CSV: accounts, products, sales channels, promotions, monthly sales actuals, monthly sales targets, and competitor price observations. I saved the files in data/salesforce-exports/.
 - **Key check:** Confirmed the export row counts matched the Salesforce records and that the files retained the IDs used to connect related records.
 - **Output:** Seven raw Salesforce export files for Power Query. The Python seed files supported the Salesforce setup; they were not the files loaded into BigQuery.
-![Data Loader export showing 864 monthly sales records successfully extracted with no errors](images/workflow/01-salesforce-export.png)
 
-*The export included Salesforce record IDs and the source key used to identify each monthly sales record.*
+#### Evidence: Salesforce Data Loader export check
+
+![Data Loader export showing 864 successful extractions and no errors](images/workflow/01-salesforce-export.png)
+
+*Data Loader confirmed that 864 monthly sales records were exported without errors. The CSV files in `data/salesforce-exports/` are the deliverables; this screenshot documents the export check.*
 
 ## 4. Profile and Clean the Salesforce Exports
 
@@ -40,9 +43,11 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Loaded the seven Salesforce CSV exports into Excel Power Query. I checked row counts, data types, missing values, key uniqueness, date ranges, and relationships. The checks revealed six different competitor-name spellings for two competitors and three missing competitor prices. I standardized the names and kept the prices blank because there was no evidence to replace them with reliable values. I also confirmed that blank promotion links on monthly sales records meant “no promotion,” rather than missing sales data.
 - **Key check:** Confirmed that the cleaned tables retained their expected row counts and that the promotion-link status showed 720 records with no promotion and 144 linked to a promotion.
 - **Output:** Seven cleaned tables, with the missing competitor prices preserved for review rather than filled with guesses.
-![Power Query profile showing competitor-name variations and missing price values](images/workflow/02-power-query-profile.png)
 
-*Profiling covered 288 records and revealed six name variations and three missing prices.*
+#### Evidence: Power Query profile
+![Power Query profile showing competitor-name variations and missing prices](images/workflow/02-power-query-profile.png)
+
+*This profile shows the issues found in the raw data: six competitor-name variations and three missing prices. The cleaned tables are saved separately in `data/power-query-cleaned/`.*
 
 ## 5. Check and Export the Clean Tables with VBA
 
@@ -50,9 +55,11 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Updated an Excel VBA macro to refresh the Power Query results, compare actual row counts and unique keys with the expected values, run project-specific checks, and export the tables as CSV files to `data/power-query-cleaned/`.
 - **Key check:** The QA summary reported PASS for all seven tables. It also confirmed that all 864 monthly sales records passed the financial check, 720 had no promotion and 144 were promotion-linked, and the competitor data contained three missing prices and two standardized competitor names.
 - **Output:** Seven cleaned CSV files, ready for BigQuery.
-![Excel QA Summary showing all seven cleaned tables passing their checks](images/workflow/03-excel-qa-summary.png)
 
-*The summary shows the expected row counts and key checks, plus project-specific checks for sales, promotions, and competitor prices.*
+#### Evidence: Excel VBA QA Summary
+![Excel QA Summary showing all seven tables passing their checks](images/workflow/03-excel-qa-summary.png)
+
+*The QA Summary records the checks that passed. The cleaned CSV files in `data/power-query-cleaned/` are the exported outputs.*
 
 ## 6. Load and Validate the Clean Tables in BigQuery
 
@@ -60,10 +67,11 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Created the project dataset in BigQuery Sandbox and loaded the seven cleaned CSV files as tables. I checked the table fields and row counts, then used SQL to check unique keys, missing links, and whether monthly sales and target records matched on customer, product, sales channel, and month.
 - **Key check:** All seven tables had the expected row counts and unique keys. The relationship checks found no unmatched records, and all 864 sales records matched a target at the same customer, product, channel, and month.
 - **Output:** Validated BigQuery tables ready for analysis.
-![BigQuery row-count and key-validation results for all seven tables](images/workflow/04-bigquery-validation.png)
 
-*All seven tables had the expected row counts and distinct keys, with no blank source keys.*
+#### Evidence: BigQuery validation query
+![BigQuery query results checking row counts, distinct keys, and blank keys across seven tables](images/workflow/04-bigquery-validation.png)
 
+*These query results validate the loaded tables. The validated tables themselves are stored in the BigQuery dataset.*
 ## 7. Analyze Commercial Performance with SQL
 
 - **Goal:** Turn the validated tables into measures that answer the project’s business questions.
@@ -76,15 +84,18 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **Goal:** Give recruiters and business readers a clear way to explore the main results.
 - **What I did:** Built a Tableau Public dashboard with four views: target attainment by product and channel, the 2025 forecast backtest, net price compared with the competitor average, and planned versus realized promotion discounts. I added filters so readers can focus on a product and channel in the relevant views.
 - **Key check:** Compared chart values with the four BigQuery summary files and confirmed the published dashboard opens publicly.
-- **Output:** [View the Commercial Sales Performance & Planning dashboard](https://public.tableau.com/app/profile/rodolfo.flores4240/viz/CommercialSalesPerformancePlanning/CommercialSalesPerformancePlanning?publish=yes)
+- **Output:** [View the Commercial Sales Performance & Planning dashboard]
 
-![Dashboard overview showing target attainment, forecast backtest, and competitor price comparison](images/dashboard_overview.png)
+#### Dashboard preview: overall performance
+![Dashboard preview showing target attainment, forecast backtest, and competitor price comparison](images/dashboard_overview.png)
 
-*The overview presents selected performance measures from the analysis.*
+*This is a static preview. The interactive Tableau Public dashboard is linked in the Output above.*
 
-![Planned-versus-realized promotion discount detail](images/promotion_discount_detail.png)
+#### Dashboard preview: promotion discount detail
 
-*The promotion view compares the recorded discount measures; the relationship is descriptive.*
+![Dashboard preview showing planned versus realized promotion discounts](images/promotion_discount_detail.png)
+
+*This is a static view of the promotion chart; the interactive dashboard is linked in the Output above.*
 
 ## Findings
 
