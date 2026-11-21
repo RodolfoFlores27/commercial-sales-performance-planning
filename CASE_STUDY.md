@@ -51,3 +51,10 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Created the project dataset in BigQuery Sandbox and loaded the seven cleaned CSV files as tables. I checked the table fields and row counts, then used SQL to check unique keys, missing links, and whether monthly sales and target records matched on customer, product, sales channel, and month.
 - **Key check:** All seven tables had the expected row counts and unique keys. The relationship checks found no unmatched records, and all 864 sales records matched a target at the same customer, product, channel, and month.
 - **Output:** Validated BigQuery tables ready for analysis.
+
+## 7. Analyze Commercial Performance with SQL
+
+- **Goal:** Turn the validated tables into measures that answer the project’s business questions.
+- **What I did:** Used BigQuery SQL to compare sales with targets, calculate gross-margin and year-over-year changes, review promotion discount gaps and related sales patterns, compare our prices with available competitor readings, and backtest a simple 2025 forecast using the matching months from 2024.
+- **Key decision or check:** Kept three missing competitor prices blank and excluded one unverified price reading from the comparison while retaining its source record. Treated the promotion and competitor comparisons as descriptive patterns, not proof that one factor caused another.
+- **Output:** Four summary CSVs for the dashboard: target attainment, forecast backtest, competitor price comparison, and planned-versus-realized promotion discounts.
