@@ -83,3 +83,21 @@ The dashboard shows four selected views of the analysis. The findings below also
 - **The measured realized discount was below the planned discount for all 24 promotions.** The dashboard shows these gaps. In the SQL analysis, promotion-linked customer-months also had lower average sales, target attainment, and gross-margin rates than non-promotion months in each product and channel combination. These are descriptive comparisons and do not show that promotions caused the differences.
 - **Observed net prices were below the available competitor average in 134 of 144 comparisons.** The comparison excluded one unverified competitor reading; 12 comparisons had only one available reading. The dashboard shows the price-index trend, but not these overall counts.
 - **The 2025 forecast baseline had weighted absolute percentage error (WAPE) between 3.88% and 8.56%** across the six product and channel combinations. WAPE summarizes forecast error relative to actual sales. The dashboard compares the actual and baseline sales lines but does not display WAPE.
+
+## Recommendations
+
+These are investigation steps suggested by the synthetic results. They are not instructions to change real sales or pricing decisions.
+
+1. **Review the largest target gaps first.** Start with Sunvale Rice, which had the largest peso shortfalls against target, and Clearbrook Dishwashing Liquid in Supermarkets & Grocery Chains, which had the lowest attainment rate. These are clear places to investigate the gap drivers.
+2. **Look at margin alongside sales.** Review Rice in Supermarkets & Grocery Chains, where net sales rose slightly while gross-margin rate fell, and Clearbrook Dishwashing Liquid in that channel, where both measures declined. This can help distinguish sales growth from profitable growth.
+3. **Check promotion definitions before judging execution.** Confirm how planned and realized discount percentages are defined and calculated. The observed gaps and promotion-linked sales patterns are descriptive, so they do not prove that promotions caused the results.
+4. **Improve competitor-price evidence before using it for pricing decisions.** Review the excluded unverified reading and seek more than one reliable competitor price for each comparison where possible.
+5. **Use the forecast as a starting benchmark.** Compare the prior-year-same-month baseline with other simple methods and test across more years before using it for planning.
+
+## Limitations
+
+- The data is synthetic. It represents only six customers, three products, two sales channels, and 24 months, so it does not represent a real distributor’s scale or behavior.
+- Promotion-linked and non-promotion results are descriptive comparisons, not evidence that promotions caused the differences. The planned and realized discount measures also need to be confirmed against real business definitions.
+- Competitor coverage is limited to two synthetic competitors. Three prices were missing, one reading was excluded as unverified, and 12 product–channel–month comparisons had only one available competitor reading.
+- The forecast backtest covers one year, 2025, using the corresponding 2024 months as the baseline. It is a simple benchmark, not a validated operating forecast.
+- The results should be checked against broader, verified business data before they are used to make operational decisions.
