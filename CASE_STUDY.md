@@ -62,7 +62,7 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 ## 8. Present Selected Results in Tableau Public
 
 - **Goal:** Give recruiters and business readers a clear way to explore the main results.
-- **What I did:** Built a Tableau Public dashboard with four views: target attainment by product and channel, the 2025 forecast backtest, net price compared with the competitor average, and planned versus realized promotion discounts. I added filters so readers can focus on a product, channel, or promotion.
+- **What I did:** Built a Tableau Public dashboard with four views: target attainment by product and channel, the 2025 forecast backtest, net price compared with the competitor average, and planned versus realized promotion discounts. I added filters so readers can focus on a product and channel in the relevant views.
 - **Key check:** Compared chart values with the four BigQuery summary files and confirmed the published dashboard opens publicly.
 - **Output:** [View the Commercial Sales Performance & Planning dashboard](https://public.tableau.com/app/profile/rodolfo.flores4240/viz/CommercialSalesPerformancePlanning/CommercialSalesPerformancePlanning?publish=yes)
 
@@ -73,3 +73,13 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 ![Planned-versus-realized promotion discount detail](images/promotion_discount_detail.png)
 
 *The promotion view compares the recorded discount measures; the relationship is descriptive.*
+
+## Findings
+
+The dashboard shows four selected views of the analysis. The findings below also include results from SQL summaries that are not displayed as dashboard charts.
+
+- **Sales were below target across all six product and channel combinations.** Net sales totaled ₱22.85 million against ₱24.27 million in targets, or 94.12% attainment. The dashboard shows the attainment rate for each combination; it does not show these overall peso totals.
+- **Year-over-year results differed by product and channel.** Rice net sales rose slightly in Supermarkets & Grocery Chains, while its gross-margin rate fell by 1.05 percentage points. Clearbrook Dishwashing Liquid in that channel had the largest year-over-year declines in net sales (4.05%) and gross-margin rate (3.08 percentage points). These comparisons are in the SQL results, not the dashboard.
+- **The measured realized discount was below the planned discount for all 24 promotions.** The dashboard shows these gaps. In the SQL analysis, promotion-linked customer-months also had lower average sales, target attainment, and gross-margin rates than non-promotion months in each product and channel combination. These are descriptive comparisons and do not show that promotions caused the differences.
+- **Observed net prices were below the available competitor average in 134 of 144 comparisons.** The comparison excluded one unverified competitor reading; 12 comparisons had only one available reading. The dashboard shows the price-index trend, but not these overall counts.
+- **The 2025 forecast baseline had weighted absolute percentage error (WAPE) between 3.88% and 8.56%** across the six product and channel combinations. WAPE summarizes forecast error relative to actual sales. The dashboard compares the actual and baseline sales lines but does not display WAPE.
