@@ -30,3 +30,10 @@ This case study explains the main workflow, decisions, checks, and outputs. The 
 - **What I did:** Used Salesforce Data Loader to export seven record groups to CSV: accounts, products, sales channels, promotions, monthly sales actuals, monthly sales targets, and competitor price observations. I saved the files in data/salesforce-exports/.
 - **Key check:** Confirmed the export row counts matched the Salesforce records and that the files retained the IDs used to connect related records.
 - **Output:** Seven raw Salesforce export files for Power Query. The Python seed files supported the Salesforce setup; they were not the files loaded into BigQuery.
+
+## 4. Profile and Clean the Salesforce Exports
+
+- **Goal:** Understand the exported data before changing it, then correct issues that could affect the analysis.
+- **What I did:** Loaded the seven Salesforce CSV exports into Excel Power Query. I checked row counts, data types, missing values, key uniqueness, date ranges, and relationships. The checks revealed six different competitor-name spellings for two competitors and three missing competitor prices. I standardized the names and kept the prices blank because there was no evidence to replace them with reliable values. I also confirmed that blank promotion links on monthly sales records meant “no promotion,” rather than missing sales data.
+- **Key check:** Confirmed that the cleaned tables retained their expected row counts and that the promotion-link status showed 720 records with no promotion and 144 linked to a promotion.
+- **Output:** Seven cleaned tables, with the missing competitor prices preserved for review rather than filled with guesses.
